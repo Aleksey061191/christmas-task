@@ -1,0 +1,48 @@
+.max-select {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(31, 112, 127, .3);
+    align-items: center;
+    justify-content: center;
+    transition: transform 2s;
+    z-index: 0;
+    opacity: 0;
+}
+
+.max-select-card {
+    width: 600px;
+    height: 200px;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #278D9F;
+    background-color: #278D9F;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.max-select-open {
+    display: flex;
+    animation: slide-in 0.5s forwards;
+}
+  
+.max-select-close {
+    display: flex;
+    animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {top: -100%; opacity:0}
+    to {top: 0; opacity:1}
+    
+}
+  
+@keyframes slide-out {
+    from {top: 0; opacity:1}
+    to {top: -100%; opacity:0}
+}

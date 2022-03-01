@@ -1,0 +1,336 @@
+.game-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 100%;
+    width: 400px;
+    padding-top: 20px;
+}
+
+.game-menu.controls-title {
+    height: 30px;
+    line-height: 30px;
+}
+
+.menu-container,
+.snow-audio-container,
+.tree-container,
+.bg-container,
+.selected-toys-container,
+.decorated-tree-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.menu-item {
+    gap: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.snow-btn {
+    width: 35px;
+    height: 35px;
+    background-image: url("../assets/svg/snow.svg");
+    transition: .5s;
+}
+
+.audio-btn {
+    width: 35px;
+    height: 35px;
+    margin-right: 40px;
+    background-image: url("../assets/svg/audio.svg");
+    transition: .5s;
+}
+
+.snow-btn.active,
+.audio-btn.active {
+  filter: invert(20%) sepia(63%) saturate(461%) hue-rotate(500deg) brightness(83%) contrast(88%);
+}
+
+.tree {
+    width: 95px;
+    height: 95px;
+    border-radius: 10px;
+    background-color: rgba(31, 112, 127, .8);
+    background-size: auto 90px;
+}
+
+.tree:nth-child(1) {
+    background-image: url("../assets/tree/1.png");
+}
+
+.tree:nth-child(2) {
+    background-image: url("../assets/tree/2.png");
+}
+
+.tree:nth-child(3) {
+    background-image: url("../assets/tree/3.png");
+}
+
+.tree:nth-child(4) {
+    background-image: url("../assets/tree/4.png");
+}
+
+.tree:nth-child(5) {
+    background-image: url("../assets/tree/5.png");
+}
+
+.tree:nth-child(6) {
+    background-image: url("../assets/tree/6.png");
+}
+
+.bg {
+    width: 65px;
+    height: 65px;
+    border: 1px solid #278D9F;
+    border-radius: 5px;
+    background-color: rgba(31, 112, 127, .8);
+    @media (max-width: 1366px){
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.bg:nth-child(1) {
+    background-image: url("../assets/bg/1.jpg");
+}
+
+.bg:nth-child(2) {
+    background-image: url("../assets/bg/2.jpg");
+}
+
+.bg:nth-child(3) {
+    background-image: url("../assets/bg/3.jpg");
+}
+
+.bg:nth-child(4) {
+    background-image: url("../assets/bg/4.jpg");
+}
+
+.bg:nth-child(5) {
+    background-image: url("../assets/bg/5.jpg");
+}
+
+.bg:nth-child(6) {
+    background-image: url("../assets/bg/6.jpg");
+}
+
+.bg:nth-child(7) {
+    background-image: url("../assets/bg/7.jpg");
+}
+
+.bg:nth-child(8) {
+    background-image: url("../assets/bg/8.jpg");
+}
+
+.bg:nth-child(9) {
+    background-image: url("../assets/bg/9.jpg");
+}
+
+.bg:nth-child(10) {
+    background-image: url("../assets/bg/10.jpg");
+}
+
+.main-tree-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url("../assets/bg/1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 750px;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+}
+
+.main-tree {
+    display: block;
+    width: 450px;
+    height: 650px;
+}
+
+.selected-toys {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-left: 30px;
+    height: 100%;
+    width: 400px;
+}
+
+.selected-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: rgba(31, 112, 127, .8);
+}
+
+.selected-card-img {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    cursor: move;
+}
+
+.selected-count {
+    z-index: 10;
+    align-self: flex-end; 
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 45px;
+    border-radius: 10px;
+    background-color: #278D9F;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.map {
+    position: relative;
+    img {
+        position: absolute;
+    }
+}
+
+.dragdrop {
+    position: absolute;
+}
+
+.buttons.buttons-game-menu {
+    width: 100%;
+    margin-right: 30px;
+}
+
+.reset-game,
+.save {
+    width: 180px;
+    @media (max-width: 1366px){
+        width: 150px;
+        font-size: 16px;
+    }
+}
+
+.switch-lights.light-color {
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-top: 15px;
+    &.active {
+        border-color: #fff;
+        &::after {
+            border-color: #666;
+        }
+    }
+}
+
+.lights-label {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.lights-btns,
+.lights-container {
+    display: flex;
+    align-items: center;
+}
+
+.lights-btns {
+    margin-bottom: 15px;
+}
+
+.light-color {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border: 1px solid #278D9F;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        border-color: #ccc;
+    }
+}
+
+.light-color.active:nth-child(1)::after,
+.light-color.active:nth-child(2)::after {  
+    border-color: #666;
+}
+
+.light-color.active:nth-child(1) {
+    border-color: #FDD700;
+}
+
+.light-color.active:nth-child(2) {
+    border-color: #FDD700;
+}
+
+.light-color.active:nth-child(3) {
+    border-color: #FD0000;
+}
+
+.light-color.active:nth-child(4) {
+    border-color: #2199EB;
+}
+
+.light-color.active:nth-child(5) {
+    border-color: #08AA05;
+}
+
+.light-color.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.lights-btns .light-color:nth-child(1) {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+}
+
+.lights-btns .light-color:nth-child(2) {
+    background-color: #FDD700;
+}
+
+.lights-btns .light-color:nth-child(3) {
+    background-color: #FD0000;
+}
+
+.lights-btns .light-color:nth-child(4) {
+    background-color: #2199EB;
+}
+
+.lights-btns .light-color:nth-child(5) {
+    background-color: #08AA05;
+}

@@ -1,0 +1,27 @@
+.snow {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    animation: fall linear forwards;
+    background-image: url('../assets/svg/snow.svg');
+    background-size: cover;
+    background-position: center;
+    transform: rotate(120deg);
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}

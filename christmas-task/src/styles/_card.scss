@@ -1,0 +1,87 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    @media (max-width: 990px){
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card-container.fix-controls {
+    margin-top: 70px;
+    @media (max-width: 990px){
+        margin-top: 0;
+    }
+}
+
+.card {
+    width: 304px;
+    height: 405px;
+    padding: 0;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #278D9F;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: .3s;
+    @media (max-width: 1366px){
+        width: 254px;
+        height: 355px;
+    }
+}
+
+.card-title {
+    width: 100%;
+    font-size: 20px;
+    text-align: start;
+    padding-left: 30px;
+    pointer-events: none;
+    @media (max-width: 1366px){
+        padding-left: 15px;
+    }
+}
+
+.card-img {
+    width: 90px;
+    height: 112px;  
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.card-description {
+    width: 100%;
+    margin-top: -20px; 
+    padding-left: 30px;
+    pointer-events: none;
+    line-height: 1;
+    user-select: none;
+    text-align: start;
+    @media (max-width: 1366px){
+        padding-left: 15px;
+    }
+}
+
+.card-description p {
+    span {
+    padding-left: 7px;
+    }
+    @media (max-width: 1366px){
+        margin: 12px 0;
+    }
+}
+
+.card.active {
+    background: #278D9F;
+}
+
+.card-error .card-title{
+    font-size: 40px;
+}

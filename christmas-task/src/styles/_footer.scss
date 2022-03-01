@@ -1,0 +1,47 @@
+.container-footer {
+    margin: auto ;
+    padding: 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #ffffff;
+    width: 100%;
+    max-width: 1600px;
+    height: 70px;
+    margin: 0 auto;
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: #278D9F;
+        }
+    }
+    @media (max-width: 875px){
+        justify-content: space-around;
+    }
+}
+
+.icon-rs {
+    width: 150px;
+    height: 50px;
+}
+
+.icon-rs:hover {
+    filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(141deg) brightness(89%) contrast(90%);
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.developer {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
